@@ -1,0 +1,45 @@
+<h1>Relatório de Rebanho</h1>
+<section class="filtros">
+  <md-select placeholder="ID">
+    <md-option *ngFor="let id of ids" [value]="id">
+      {{ id }}
+    </md-option>
+  </md-select>
+  <md-select placeholder="Nome do Rebanho">
+    <md-option *ngFor="let rebanho of rebanhos" [value]="rebanho.id">
+      {{ rebanho.nome }}
+    </md-option>
+  </md-select>
+  <button>Emitir</button>
+  <button>Cancelar</button>
+</section>
+<section class="list">
+  <table>
+    <thead>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>Brinco</td>
+        <td>Raça</td>
+        <td>Sexo</td>
+        <td>Nascimento</td>
+        <td>Observações</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>123</td>
+        <td>Jersey</td>
+        <td>Feminino</td>
+        <td>01/01/2016</td>
+        <td></td>
+      </tr>    
+    </tbody>
+  </table>
+  <button>Imprimir</button>
+  <button>Cancelar</button>
+</section>

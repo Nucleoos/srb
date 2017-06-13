@@ -1,0 +1,62 @@
+<h1>Relatório de Inseminações</h1>
+<section class="filtros">
+  <md-select placeholder="Brinco">
+    <md-option *ngFor="let id of ids" [value]="id">
+      {{ id }}
+    </md-option>
+  </md-select>
+  <md-select placeholder="Raça">
+    <md-option *ngFor="let rebanho of rebanhos" [value]="rebanho.id">
+      {{ rebanho.nome }}
+    </md-option>
+  </md-select>
+  <md-input-container>
+    <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+    <button mdSuffix [mdDatepickerToggle]="picker"></button>
+  </md-input-container>
+  <md-datepicker #picker></md-datepicker>  
+  <md-select placeholder="Veterinário">
+    <md-option *ngFor="let id of ids" [value]="id">
+      {{ id }}
+    </md-option>
+  </md-select>
+  <md-select placeholder="Inseminador">
+    <md-option *ngFor="let rebanho of rebanhos" [value]="rebanho.id">
+      {{ rebanho.nome }}
+    </md-option>
+  </md-select>  
+  <button>Emitir</button>
+  <button>Cancelar</button>
+</section>
+<section class="list">
+  <table>
+    <thead>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>Brinco</td>
+        <td>Raça Receptor</td>
+        <td>Raça Doador</td>
+        <td>Inseminador</td>
+        <td>Veterinário</td>
+        <td>Data de Inseminação</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>123</td>
+        <td>Jersey</td>
+        <td>Jersey</td>
+        <td>Valmir</td>
+        <td>Dener</td>
+        <td>01/01/2016</td>
+      </tr>    
+    </tbody>
+  </table>
+  <button>Imprimir</button>
+  <button>Cancelar</button>
+</section>

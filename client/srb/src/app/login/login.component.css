@@ -1,0 +1,15 @@
+.bt-link {
+    border: none;
+    background-color: #FFF;
+    color: blue;
+    cursor: pointer;
+}
+.login-painel {
+    width:300px;
+    height:300px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-60%);
+    transform: translateX(-50%);
+}
